@@ -1,0 +1,258 @@
+{
+ "sysstat": {
+  "hosts": [
+   {
+    "nodename": "www4250uj",
+    "sysname": "Linux",
+    "release": "6.8.0-106-generic",
+    "machine": "x86_64",
+    "number-of-cpus": 3,
+    "file-date": "2026-08-23",
+    "statistics": [
+     {
+      "timestamp": {
+       "date": "2026-08-23",
+       "time": "00:10:09",
+       "utc": 0,
+       "interval": 600
+      },
+      "cpu-load": [
+       {
+        "cpu": "all",
+        "user": 2.07,
+        "nice": 0.02,
+        "system": 0.75,
+        "iowait": 0.17,
+        "steal": 0.0,
+        "irq": 0.0,
+        "soft": 0.03,
+        "guest": 0.0,
+        "gnice": 0.0,
+        "idle": 96.95
+       },
+       {
+        "cpu": "0",
+        "user": 2.01,
+        "nice": 0.02,
+        "system": 0.7,
+        "iowait": 0.16,
+        "steal": 0.0,
+        "irq": 0.0,
+        "soft": 0.05,
+        "guest": 0.0,
+        "gnice": 0.0,
+        "idle": 97.05
+       },
+       {
+        "cpu": "1",
+        "user": 2.02,
+        "nice": 0.02,
+        "system": 0.75,
+        "iowait": 0.12,
+        "steal": 0.0,
+        "irq": 0.0,
+        "soft": 0.03,
+        "guest": 0.0,
+        "gnice": 0.0,
+        "idle": 97.05
+       },
+       {
+        "cpu": "2",
+        "user": 2.18,
+        "nice": 0.0,
+        "system": 0.81,
+        "iowait": 0.23,
+        "steal": 0.0,
+        "irq": 0.0,
+        "soft": 0.03,
+        "guest": 0.0,
+        "gnice": 0.0,
+        "idle": 96.75
+       }
+      ],
+      "memory": {
+       "memfree": 1234567,
+       "avail": 2345678,
+       "memused": 3456789,
+       "memused-percent": 58.1,
+       "swpfree": 4194300,
+       "swpused": 0,
+       "swpused-percent": 0.0
+      },
+      "disk": [
+       {
+        "disk-device": "vda",
+        "tps": 1.5,
+        "rkB": 20.0,
+        "wkB": 40.0,
+        "dkB": 0.0,
+        "areq-sz": 60.0,
+        "aqu-sz": 0.01,
+        "await": 0.85,
+        "util-percent": 1.2
+       }
+      ],
+      "network": {
+       "net-dev": [
+        {
+         "iface": "ens3",
+         "rxpck": 10.0,
+         "txpck": 12.0,
+         "rxkB": 1.5,
+         "txkB": 2.5,
+         "rxcmp": 0.0,
+         "txcmp": 0.0,
+         "rxmcst": 0.0,
+         "ifutil-percent": 0.01
+        },
+        {
+         "iface": "docker0",
+         "rxpck": 0.0,
+         "txpck": 0.0,
+         "rxkB": 0.0,
+         "txkB": 0.0,
+         "rxcmp": 0.0,
+         "txcmp": 0.0,
+         "rxmcst": 0.0,
+         "ifutil-percent": 0.0
+        }
+       ]
+      },
+      "queue": {
+       "runq-sz": 1,
+       "plist-sz": 420,
+       "ldavg-1": 0.15,
+       "ldavg-5": 0.1,
+       "ldavg-15": 0.05,
+       "blocked": 0
+      },
+      "unknown-future-stat": {
+       "whatever": 1
+      }
+     },
+     {
+      "timestamp": {
+       "date": "2026-08-23",
+       "time": "00:20:12",
+       "utc": 0,
+       "interval": 600
+      },
+      "cpu-load": [
+       {
+        "cpu": "all",
+        "user": 2.08,
+        "nice": 0.0,
+        "system": 0.77,
+        "iowait": 0.13,
+        "steal": 0.0,
+        "irq": 0.0,
+        "soft": 0.03,
+        "guest": 0.0,
+        "gnice": 0.0,
+        "idle": 96.99
+       },
+       {
+        "cpu": "0",
+        "user": 1.73,
+        "nice": 0.0,
+        "system": 0.68,
+        "iowait": 0.12,
+        "steal": 0.0,
+        "irq": 0.0,
+        "soft": 0.04,
+        "guest": 0.0,
+        "gnice": 0.0,
+        "idle": 97.43
+       },
+       {
+        "cpu": "1",
+        "user": 2.38,
+        "nice": 0.0,
+        "system": 0.83,
+        "iowait": 0.08,
+        "steal": 0.0,
+        "irq": 0.0,
+        "soft": 0.03,
+        "guest": 0.0,
+        "gnice": 0.0,
+        "idle": 96.68
+       },
+       {
+        "cpu": "2",
+        "user": 2.12,
+        "nice": 0.0,
+        "system": 0.79,
+        "iowait": 0.18,
+        "steal": 0.0,
+        "irq": 0.0,
+        "soft": 0.02,
+        "guest": 0.0,
+        "gnice": 0.0,
+        "idle": 96.87
+       }
+      ],
+      "memory": {
+       "memfree": 1234000,
+       "avail": 2345000,
+       "memused": 3457000,
+       "memused-percent": 58.2,
+       "swpfree": 4194300,
+       "swpused": 0,
+       "swpused-percent": 0.0
+      },
+      "disk": [
+       {
+        "disk-device": "vda",
+        "tps": 1.6,
+        "rkB": 21.0,
+        "wkB": 41.0,
+        "dkB": 0.0,
+        "areq-sz": 61.0,
+        "aqu-sz": 0.02,
+        "await": 0.9,
+        "util-percent": 1.3
+       }
+      ],
+      "network": {
+       "net-dev": [
+        {
+         "iface": "ens3",
+         "rxpck": 11.0,
+         "txpck": 13.0,
+         "rxkB": 1.6,
+         "txkB": 2.6,
+         "rxcmp": 0.0,
+         "txcmp": 0.0,
+         "rxmcst": 0.0,
+         "ifutil-percent": 0.01
+        },
+        {
+         "iface": "docker0",
+         "rxpck": 0.0,
+         "txpck": 0.0,
+         "rxkB": 0.0,
+         "txkB": 0.0,
+         "rxcmp": 0.0,
+         "txcmp": 0.0,
+         "rxmcst": 0.0,
+         "ifutil-percent": 0.0
+        }
+       ]
+      },
+      "queue": {
+       "runq-sz": 1,
+       "plist-sz": 420,
+       "ldavg-1": 0.15,
+       "ldavg-5": 0.1,
+       "ldavg-15": 0.05,
+       "blocked": 0
+      },
+      "unknown-future-stat": {
+       "whatever": 1
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

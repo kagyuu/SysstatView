@@ -1,0 +1,24 @@
+# SysstatView 配布構成 (docs/P005-impl-plan.md §3 U008)
+services:
+  api:
+    build:
+      context: ./backend
+    environment:
+      SYSSTAT_LOG_DIR: /var/log/sysstat
+    volumes:
+      # ログディレクトリは読み取り専用でマウントする (REQ-N-006)。
+      # アプリは書き込みを一切行わない。
+      - ${SYSSTAT_LOG_HOST_DIR:-./sysstat-log/var/log/sysstat}:/var/log/sysstat:ro
+    restart: unless-stopped
+    # ホストにポートを公開しない。アクセス経路を web に一本化する。
+    expose:
+      - "8000"
+
+  web:
+    build:
+      context: ./frontend
+    ports:
+      - "${SYSSTATVIEW_PORT:-8080}:80"
+    depends_on:
+      - api
+    restart: unless-stopped

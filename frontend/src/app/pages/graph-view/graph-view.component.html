@@ -1,0 +1,61 @@
+<!-- SC-02 (docs/P002-frontend-spec.md §3.1) -->
+<section class="head">
+  <button type="button" class="back" (click)="onBack()" data-testid="back">← 戻る</button>
+
+  @if (meta) {
+    <div class="meta" data-testid="meta">
+      <span class="file" data-testid="file-name">{{ meta.fileName }}</span>
+      <span class="sub">
+        種別: <span class="kind kind-{{ meta.kind }}">{{ meta.kind }}</span>
+        / {{ meta.date }}
+      </span>
+      <span class="host">
+        @if (meta.hostname) {
+          <span data-testid="hostname">{{ meta.hostname }}</span>
+        }
+        @if (meta.kernel) {
+          <span> / {{ meta.kernel }}</span>
+        }
+        @if (meta.arch) {
+          <span> / {{ meta.arch }}</span>
+        }
+        @if (meta.cpuCount) {
+          <span> / {{ meta.cpuCount }} CPU</span>
+        }
+      </span>
+    </div>
+  }
+</section>
+
+@if (loading) {
+  <p class="message" data-testid="loading">読み込み中...</p>
+}
+
+@if (errorMessage) {
+  <section class="error-panel" data-testid="error">
+    <p class="error-message">{{ errorMessage }}</p>
+    @if (errorHint) {
+      <p class="error-hint" data-testid="error-hint">{{ errorHint }}</p>
+    }
+    @if (errorDetail) {
+      <details>
+        <summary>詳細</summary>
+        <pre>{{ errorDetail }}</pre>
+      </details>
+    }
+  </section>
+}
+
+@for (chart of charts; track chart.id) {
+  <section class="chart-block" [attr.data-testid]="'chart-' + chart.id">
+    <h2 class="chart-title" [attr.data-testid]="'title-' + chart.id">{{ chart.title }}</h2>
+    <p class="chart-desc" [attr.data-testid]="'desc-' + chart.id">{{ chart.description }}</p>
+    <div class="chart-canvas">
+      <canvas #canvasRef [attr.data-chart-id]="chart.id"></canvas>
+    </div>
+  </section>
+}
+
+@if (!loading && !errorMessage && charts.length === 0) {
+  <p class="message" data-testid="no-charts">表示できる時系列データがありません。</p>
+}

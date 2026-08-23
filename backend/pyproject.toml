@@ -1,0 +1,10 @@
+[project]
+name = "sysstatview-backend"
+version = "0.1.0"
+description = "SysstatView backend - reads sysstat sa/sar logs and serves time-series metrics"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".."]
+markers = ["slow: 時間のかかる受け入れテスト"]
